@@ -82,7 +82,7 @@ export function mergeDailySpecials(regularMenu, specialsMenu) {
   const regMenu = typeof regularMenu === "object" && regularMenu !== null && !Array.isArray(regularMenu)
     ? regularMenu : {};
 
-  const specialsMenu = typeof specialsMenu === "object" && specialsMenu !== null && !Array.isArray(specialsMenu)
+  specialsMenu = typeof specialsMenu === "object" && specialsMenu !== null && !Array.isArray(specialsMenu)
     ? specialsMenu : {};
 
   return { ...regMenu, ...specialsMenu };
