@@ -102,7 +102,7 @@ export function searchThaliMenu(thalis, query) {
   return thalis.filter(thali => {
     const nameMatch = typeof thali?.name === "string" && thali.name.toLowerCase().includes(q);
 
-    const itemMatch = Array.isArray(thali?.items) && thali.items.some(item => typeof item === "string" && item.toLowerCase().includes(q);
+    const itemMatch = Array.isArray(thali?.items) && thali.items.some(item => typeof item === "string" && item.toLowerCase().includes(q));
 
     return nameMatch || itemMatch;
   });
